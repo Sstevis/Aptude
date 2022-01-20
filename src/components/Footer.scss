@@ -1,0 +1,136 @@
+$primary-color: #6948ff;
+$secondary-color: #553bcb;
+$darkgrey-color: #22262a;
+$lightgrey-color: #d3d3d3;
+$grey-color: #808080;
+
+.footer {
+  width: 100%;
+  padding: 1rem 0;
+  background: $darkgrey-color;
+  color: #fff;
+
+  .container {
+    max-width: 1240px;
+    padding: 3rem 1rem;
+    margin: auto;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 2fr;
+    // grid-gap: 0.5rem;
+
+    .col {
+      h6 {
+        margin-bottom: 0.5rem;
+        color: $lightgrey-color;
+        font-size: 14px;
+        // font-weight: 700;
+        // text-transform: uppercase;
+      }
+      ul {
+        li {
+          margin: 0.4rem 0;
+          a {
+            // margin: 0.5rem 0;
+            color: $lightgrey-color;
+            font-size: 14px;
+          }
+        }
+      }
+
+      &.subscribe {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-direction: column;
+        padding-top: 1rem;
+
+        p {
+          color: $lightgrey-color;
+        }
+
+        .subscribe {
+          input {
+            padding: 0.3rem 0.5rem;
+            border-radius: 2px;
+            border: 1px solid $lightgrey-color;
+            margin: 0.4rem 0.4rem 0 0;
+          }
+
+          //   button {
+          //   }
+
+          button {
+            width: 30%;
+            padding: 0.3rem 0.5rem;
+            border-radius: 4px;
+            border: 1px solid $primary-color;
+            background-color: $primary-color;
+            color: #fff;
+            cursor: pointer;
+
+            &:hover {
+              border: 1px solid $secondary-color;
+              background-color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    .content {
+      display: flex;
+      max-width: 1240px;
+      margin: 0 auto;
+      //   justify-content: center;
+      justify-content: space-between;
+      border-top: 1px solid $grey-color;
+      margin-top: -1rem;
+
+      .rights {
+        p {
+          color: $lightgrey-color;
+          margin-top: 1rem;
+        }
+      }
+
+      div {
+        margin-top: 1rem;
+        i {
+          font-size: 24px;
+          cursor: pointer;
+          margin-left: 1rem;
+          color: $lightgrey-color;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer {
+    margin: auto;
+
+    .container {
+      max-width: 650px;
+      //   display: block;
+      //   margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      .solutions,
+      .support,
+      .company,
+      .legal {
+        margin-right: 2.5rem;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .footer-bottom {
+    padding: 0 1rem;
+  }
+}

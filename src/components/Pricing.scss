@@ -1,0 +1,151 @@
+$primary-color: #6948ff;
+$secondary-color: #553bcb;
+$darkgrey-color: #22262a;
+$lightgrey-color: #d3d3d3;
+$grey-color: #808080;
+
+// button {
+//   width: 100%;
+//   padding: 8px 0;
+//   border-radius: 4px;
+//   border: 1px solid $primary-color;
+//   background-color: $primary-color;
+//   color: #fff;
+//   cursor: pointer;
+// }
+
+// button:hover {
+//   border: 1px solid $secondary-color;
+//   background-color: $secondary-color;
+// }
+
+.pricing {
+  width: 100%;
+  margin-top: 5rem;
+
+  .container {
+    max-width: 1240px;
+    padding: 1rem;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .top-content {
+      display: grid;
+      grid-template-columns: (3fr 1fr);
+      border-bottom: 1px solid $lightgrey-color;
+      padding-bottom: 3rem;
+
+      h2 {
+        font-size: 38px;
+        padding-bottom: 0.5rem;
+
+        span {
+          color: $primary-color;
+        }
+      }
+
+      p {
+        color: $grey-color;
+      }
+
+      .btn-price {
+        margin-top: 15px;
+        button {
+          width: 50%;
+          padding: 12px 0;
+          border-radius: 4px;
+          border: 1px solid $primary-color;
+          background-color: $primary-color;
+          color: #fff;
+          cursor: pointer;
+        }
+
+        button:hover {
+          border: 1px solid $secondary-color;
+          background-color: $secondary-color;
+        }
+      }
+    }
+
+    .bottom-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      margin: 3rem auto;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1rem 1rem 0;
+
+        p {
+          span {
+            color: $primary-color;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 18px;
+          }
+        }
+
+        h3 {
+          font-size: 30px;
+          margin: 0.7rem 0;
+        }
+
+        .all-in-one {
+          line-height: 1.5;
+        }
+
+        div {
+          display: flex;
+          border-bottom: 1px solid $lightgrey-color;
+          padding: 1rem 0;
+        }
+
+        .no-border {
+          border: none;
+        }
+      }
+
+      .left-side {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+// @media screen and (max-width: 700px)
+@media screen and (max-width: 700px) {
+  .pricing {
+    // width: 100%;
+    width: 500px;
+    text-align: center;
+
+    .container {
+      padding: 0 2rem;
+      .top-content {
+        display: block;
+
+        div {
+          width: 400px;
+          h2 {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .bottom-content {
+        display: block;
+
+        .card {
+          padding-left: 2rem;
+          margin: 0 auto;
+        }
+
+        .left-side {
+          //   padding-right: 2rem;
+        }
+      }
+    }
+  }
+}

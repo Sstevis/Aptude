@@ -1,0 +1,205 @@
+$primary-color: #6948ff;
+$secondary-color: #553bcb;
+$darkgrey-color: #22262a;
+$lightgrey-color: #d3d3d3;
+$grey-color: #808080;
+
+// .button {
+//   width: 100%;
+//   padding: 8px 0;
+//   border-radius: 4px;
+//   border: 1px solid $primary-color;
+//   background-color: $primary-color;
+//   color: #fff;
+//   cursor: pointer;
+// }
+
+// .button:hover {
+//   border: 1px solid $secondary-color;
+//   background-color: $secondary-color;
+// }
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: $darkgrey-color;
+
+  .container {
+    max-width: 1240px;
+    padding: 0 1rem;
+    margin: auto;
+
+    .content {
+      display: grid;
+      //   grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
+
+      .col-1 {
+        padding: 1rem 1rem 1rem 0;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-content: center;
+
+        h1 {
+          font-size: 42px;
+          font-weight: 700;
+          color: #fff;
+        }
+
+        p {
+          font-size: 1rem;
+          color: $grey-color;
+          line-height: 1.4;
+          margin-top: 1.2rem;
+        }
+
+        .used-by {
+          p {
+            color: $lightgrey-color;
+            font-size: 12px;
+            margin: 2rem 0 1rem 0;
+          }
+
+          .icons {
+            i {
+              color: $grey-color;
+              padding-right: 1rem;
+            }
+          }
+        }
+
+        .primary-color {
+          color: $primary-color;
+        }
+      }
+
+      .col-2 {
+        padding: 1rem;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 0.8rem;
+
+        .form-layout {
+          width: 400px;
+          margin: auto;
+          background-color: #fff;
+          border-radius: 6px;
+
+          .form-container {
+            padding: 1.5rem 2rem;
+
+            .sign-in-txt {
+              //   margin-bottom: 10px;
+              margin-bottom: 18px;
+              color: $grey-color;
+            }
+
+            .social-login {
+              i {
+                background-color: #fff;
+                padding: 16px 45px 6px 45px;
+                border: 1px solid $lightgrey-color;
+                border-radius: 4px;
+              }
+            }
+
+            .divider {
+              p {
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid $lightgrey-color;
+                line-height: 0.1rem;
+                margin: 2rem 0;
+
+                span {
+                  background-color: #fff;
+                  padding: 0 10px;
+                }
+              }
+            }
+
+            form {
+              input {
+                display: block;
+                width: 100%;
+                margin: 1.2rem 0;
+                padding: 8px;
+                border-radius: 1px solid $lightgrey-color;
+                border-radius: 4px;
+              }
+
+              button {
+                width: 100%;
+                padding: 8px 0;
+                border-radius: 4px;
+                border: 1px solid $primary-color;
+                background-color: $primary-color;
+                color: #fff;
+                cursor: pointer;
+              }
+
+              button:hover {
+                border: 1px solid $secondary-color;
+                background-color: $secondary-color;
+              }
+            }
+          }
+
+          .form-footer {
+            border-top: 1px solid $lightgrey-color;
+            background-color: #fff;
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+            // padding: 1rem;
+
+            p {
+              padding: 1.5rem 2rem;
+
+              span {
+                font-weight: 700;
+                line-height: 1.5;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero {
+    height: auto;
+    width: 100%;
+    text-align: center;
+
+    .container {
+      padding: 0 1rem;
+
+      .content {
+        grid-template-columns: (1fr);
+
+        .col-1 {
+          height: 90vh;
+          padding: 0.2rem;
+          margin-top: -5rem;
+          min-width: 100%;
+
+          h1 {
+            font-size: 32px;
+          }
+        }
+
+        .col-2 {
+          .form-layout {
+            margin-bottom: 8rem;
+          }
+        }
+      }
+    }
+  }
+}
